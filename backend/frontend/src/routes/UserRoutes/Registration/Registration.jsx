@@ -60,7 +60,7 @@ const UserRegistration = () => {
         formDataToSend.append(key, formData[key])
       }
 
-      const response = await axios.post(`${window.location.origin}/api/userRoutes/registration`, formDataToSend, { withCredentials: true });
+      const response = await axios.post(`/api/userRoutes/registration`, formDataToSend, { withCredentials: true });
 
 
 

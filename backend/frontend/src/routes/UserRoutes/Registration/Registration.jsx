@@ -60,7 +60,7 @@ const UserRegistration = () => {
         formDataToSend.append(key, formData[key])
       }
 
-      const response = await axios.post(`/api/userRoutes/registration`, formDataToSend, { withCredentials: true });
+      const response = await axios.post(`${window.location.origin}/api/userRoutes/registration`, formDataToSend, { withCredentials: true });
 
 
 
@@ -88,7 +88,7 @@ const UserRegistration = () => {
 
 
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.log('Error submitting form:', error);
       alert('Failed to submit the form.');
     }
   };
